@@ -1,6 +1,8 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import FestasAPI from '../../../api/FestasAPI';
+import FestaAdd from '../festaAdd/festaAdd';
+import FestaRemove from '../festaRemove/festaRemove';
 
 import templateUrl from './partiesList.html';
 
@@ -21,7 +23,9 @@ const name = 'festasList';
 
 export default angular.module(name,[
     angularMeteor,
-    FestasAPI.name
+    FestasAPI.name,
+    FestaAdd.name,
+    FestaRemove.name
 ]).component(name, {
     templateUrl,
     controllerAs: name,

@@ -1,7 +1,9 @@
+<festa-add></festa-add>
 <ul>
     <li ng-repeat="festa in festasList.festas">
         {{festa.name}}
         <p>{{festa.description}}</p>
+        <festa-remove festa="festa"></festa-remove>
     </li>
 
 
