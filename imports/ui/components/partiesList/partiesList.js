@@ -1,6 +1,6 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-import FestasAPI from './FestasService';
+import FestasAPI from '../../../api/FestasAPI';
 
 import templateUrl from './partiesList.html';
 
