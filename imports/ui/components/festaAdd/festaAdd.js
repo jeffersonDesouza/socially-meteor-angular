@@ -13,7 +13,9 @@ class FestaAdd {
     }
 
     saveEvento(novoEvento){
-        this.FestasAPI.insert(novoEvento)
+        
+
+        this.FestasAPI.insert(novoEvento);
         delete this.$scope.novoEvento;
     }
 

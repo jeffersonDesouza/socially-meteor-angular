@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Festas } from '../collections/parties';
+import './api/users/users.js';
 
 
 Meteor.startup(() => {

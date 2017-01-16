@@ -1,0 +1,20 @@
+<p>
+    Nome do Evento: {{festaDetails.festa.name}}
+</p>
+<p>
+    Detalhes do Evento: {{festaDetails.festa.description}}
+</p>
+<br>
+
+
+<form ng-submit="festaDetails.update()" method="post">
+    <input type="text" ng-model="festaDetails.festa.name">
+    <input type="text" ng-model="festaDetails.festa.description">
+    <label for="descricao-evento">Festa pública?</label>
+    <input id="descricao-evento" type="checkbox" ng-model="festaDetails.festa.public">
+
+    <input type="submit" value="Salvar">
+</form>
+
+
+<button id="button" ui-sref="festas">Voltar</button>

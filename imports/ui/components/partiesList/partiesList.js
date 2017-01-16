@@ -1,5 +1,6 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
+import uiRouter from 'angular-ui-router';
 import FestasAPI from '../../../api/FestasAPI';
 import FestaAdd from '../festaAdd/festaAdd';
 import FestaRemove from '../festaRemove/festaRemove';
@@ -23,6 +24,7 @@ const name = 'festasList';
 
 export default angular.module(name,[
     angularMeteor,
+    uiRouter,
     FestasAPI.name,
     FestaAdd.name,
     FestaRemove.name
@@ -30,4 +32,13 @@ export default angular.module(name,[
     templateUrl,
     controllerAs: name,
     controller: FestasList
-});
+}).config(config);
+
+function config($stateProvider) {
+    'ngInject';
+
+    $stateProvider.state('festas',{
+        url:'/festas',
+        template:'<festas-list></festas-list>'
+    });
+}
